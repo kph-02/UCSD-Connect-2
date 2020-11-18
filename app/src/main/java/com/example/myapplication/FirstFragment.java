@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +28,40 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
+                        //navigate from first to second
+                        //.navigate(R.id.action_FirstFragment_to_SecondFragment);
+
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
+
+
+
+
             }
         });
+
+        //button to login
+        view.findViewById(R.id.login_screen_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        //navigate from first to second
+                        //.navigate(R.id.action_FirstFragment_to_SecondFragment);
+
+                        .navigate(R.id.action_FirstFragment_to_loginActivity2);
+            }
+        });
+
+        //button to home
+        view.findViewById(R.id.home_button_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        //navigate from first to second
+                        //.navigate(R.id.action_FirstFragment_to_SecondFragment);
+
+                        .navigate(R.id.action_FirstFragment_to_homeActivity);
+            }
+        });
+
     }
 }
